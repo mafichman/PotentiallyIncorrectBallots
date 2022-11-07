@@ -71,6 +71,8 @@ On November 5th, 2022, the Philadelphia City Commissioners publicly published li
 
 *"all these ballot submissions have the possibility of NOT being counted. It is strongly advised that the voters on these lists request a replacement ballot at the County Board of Elections office in City Hall Room 140 on Saturday or Sunday from 9:00 am – 3:00 pm; Monday, November 7th from 9:00 am – 5:00 pm; or on Election Day from 7:30 am – 7:30 pm to avoid the potential rejection of their ballot."*
 
+There are also instructions on the Commissioners site for people who cannot appear in person.
+
 The databases they published were not searchable in a web browser. This site formats the data in a searchable tool.
 
 This tool points directly to the URLs published by the City Commissioners. The code used to generate this searchable database [is open source and available](https://github.com/mafichman/PotentiallyIncorrectBallots).
@@ -87,3 +89,5 @@ datatable(dat,
 **Attribution and Sourcing**
 
 This tool was created by Michael Fichman on 11/7/2022 using data published by the City Commissioners on 11/5/2022. The code is available [on Github](https://github.com/mafichman/PotentiallyIncorrectBallots).
+
+An equivalent tool for Allegheny County can be found [here](https://mafichman.github.io/incorrectBallotsPGH/).
