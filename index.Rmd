@@ -1,5 +1,5 @@
 ---
-title: "Philadelphia City Commissioners Potentially Incorrect Ballots - Searchable Database"
+title: "Is My Ballot Incorrect? A Searchable Database of Philadelphia City Commissioners Potentially Incorrect Ballots"
 date: '2022-11-07'
 output: 
   html_document:
