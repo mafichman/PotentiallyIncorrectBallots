@@ -76,7 +76,7 @@ There are also instructions on the Commissioners site for people who cannot appe
 The databases they published were not searchable in a web browser. This site formats the data in a searchable tool.
 
 This tool points directly to the URLs published by the City Commissioners. The code used to generate this searchable database [is open source and available](https://github.com/mafichman/PotentiallyIncorrectBallots).
-This site is not associated with the City Commissioners, any government, or any election entity.
+This site is not associated with the City Commissioners, any government, political party, political action committee, or any election entity.
 
 # Search for your ballot
 
