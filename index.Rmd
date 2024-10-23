@@ -32,7 +32,7 @@ df <- read_excel(tf1)
 
 # What is this document?
 
-You can use this site to to see if your 2024 mail-in ballot for the November election was listed as "potentially incorrect" by the Philadelphia City Commissioners (as of October 23rd, 2024) and in need of correction.
+**You can use this site to to see if your 2024 mail-in ballot for the November election was listed as "potentially incorrect" by the Philadelphia City Commissioners (as of October 23rd, 2024) and in need of correction.**
 
 For information about how to correct your ballot, [please visit the Philadelphia City Commissioners' website](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/).
 
@@ -42,19 +42,15 @@ On October 21st, 2024, the Philadelphia City Commissioners publicly published pd
 
 *- Unverifiable Identification: Mail ballots from voters whose identification could not be verified. Voters who have not submitted acceptable proof of ID or whose ID could not be verified should fill out the ID verification form, and submit it along with a photocopy or picture of an acceptable ID (if available) to phillyelection@phila.gov or via fax to (215) 686-3398 by Tuesday, November 12, 2024. Without this information, the Board cannot count your ballot.*
 
-*- Undeliverable or Potentially Flawed: Ballots returned by the U.S. Postal Service as “undeliverable”, or administratively determined to be potentially flawed. Flaws may include lacking a signature on the declaration envelope, lacking a written date on the declaration envelope, lacking a secrecy envelope, or having a potentially incorrect date. These ballot submissions have the possibility of NOT being counted.*
-"*
+*- Undeliverable or Potentially Flawed: Ballots returned by the U.S. Postal Service as “undeliverable”, or administratively determined to be potentially flawed. Flaws may include lacking a signature on the declaration envelope, lacking a written date on the declaration envelope, lacking a secrecy envelope, or having a potentially incorrect date. These ballot submissions have the possibility of NOT being counted."*
 
 There are also instructions on the Commissioners site for people who cannot appear in person.
 
-The databases they published were not searchable in a web browser. This site formats the data in a searchable tool.
-
-This tool points directly to the URLs published by the City Commissioners. The code used to generate this searchable database [is open source and available](https://github.com/mafichman/PotentiallyIncorrectBallots).
-This site is not associated with the City Commissioners, any government, political party, political action committee, or any election entity.
+This site formats the Commissioners' data in a searchable tool.
 
 # Search for your ballot
 
-Search the database below to see if your ballot was flagged as "potentially incorrect."
+Search the database below to see if your ballot was flagged.
 
 ```{r datatable, echo=FALSE}
 datatable(df, 
@@ -63,3 +59,5 @@ datatable(df,
 **Attribution and Sourcing**
 
 This tool was created by Michael Fichman on 10/23/2024 using data published by the City Commissioners on 10/21/2024. The code is available [on Github](https://github.com/mafichman/PotentiallyIncorrectBallots).
+
+This tool points directly to the URLs published by the City Commissioners. This site is not associated with the City Commissioners, any government, political party, political action committee, or any election entity.
