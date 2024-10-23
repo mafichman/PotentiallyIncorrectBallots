@@ -1,6 +1,6 @@
 ---
 title: "A Searchable Database of Philadelphia City Commissioners Potentially Incorrect Ballots"
-date: '2022-11-07'
+date: '2024-10-23'
 output: 
   html_document:
     toc: true
@@ -19,57 +19,31 @@ library(kableExtra)
 # Load data in four steps for four xlsx files
 
 # URL to object "url1" - "No Signature"
-url1 <- "https://vote.phila.gov/files/announcements/11_4_2022_No_signature.xlsx"
+url1 <- "https://vote.phila.gov/media/2024_General_Election_Deficiency_List.xlsx"
 
 # Use httr to write the object to a temp file on disk
 GET(url1, write_disk(tf1 <- tempfile(fileext = ".xlsx")))
 
 # Read the file using readxl package, attach the name given by the PHL
 # City Commissioners to this file as a column
-df1 <- read_excel(tf1) %>%
-  mutate(Issue = "No Signature")
-
-# Repeat for file 2 - No Date
-url2 <- "https://vote.phila.gov/files/announcements/11_4_2022_No_Date.xlsx"
-
-GET(url2, write_disk(tf2 <- tempfile(fileext = ".xlsx")))
-
-df2 <- read_excel(tf2) %>%
-  mutate(Issue = "No Date")
-
-# Repeat for file 3 - Potentially Incorrect Date
-url3 <- "https://vote.phila.gov/files/announcements/11_4_2022_Potentially_Incorrect.xlsx"
-
-GET(url3, write_disk(tf3 <- tempfile(fileext = ".xlsx")))
-
-df3 <- read_excel(tf3) %>%
-  mutate(Issue = "Potentially incorrect date")
-
-# Repeat for file 4 - Naked Ballots
-
-url4 <- "https://vote.phila.gov/files/announcements/11_4_2022_Naked.xlsx"
-
-GET(url4, write_disk(tf4 <- tempfile(fileext = ".xlsx")))
-
-df4 <- read_excel(tf4) %>%
-  mutate(Issue = "Not enclosed in a Secrecy Envelope (a.k.a. Naked Ballots)")
-
-# Bind the data sets together
-dat <- rbind(df1, df2) %>%
-  rbind(., df3) %>%
-  rbind(., df4)
+df <- read_excel(tf1) 
 
 ```
 
 # What is this document?
 
-You can use this site to to see if your 2022 mail-in ballot for the November election was listed as "potentially incorrect" by the Philadelphia City Commissioners (as of Nov. 5th) and in need of correction.
+You can use this site to to see if your 2024 mail-in ballot for the November election was listed as "potentially incorrect" by the Philadelphia City Commissioners (as of October 23rd, 2024) and in need of correction.
 
-For information about how to correct your ballot, [please visit the Philadelphia City Commissioners' website](https://vote.phila.gov/news/2022/11/05/ballots-administratively-determined-to-have-no-secrecy-envelope-or-no-signature-no-date-or-a-potentially-incorrect-date-on-return-envelope/).
+For information about how to correct your ballot, [please visit the Philadelphia City Commissioners' website](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/).
 
-On November 5th, 2022, the Philadelphia City Commissioners publicly published lists of ballots that might be "potentially incorrect" for various reasons. [They published 4 pdf and 4 Excel files to their website](https://vote.phila.gov/news/2022/11/05/ballots-administratively-determined-to-have-no-secrecy-envelope-or-no-signature-no-date-or-a-potentially-incorrect-date-on-return-envelope/) with lists of mail-in-ballots that had potential problems. The [announcement read](https://vote.phila.gov/news/2022/11/05/ballots-administratively-determined-to-have-no-secrecy-envelope-or-no-signature-no-date-or-a-potentially-incorrect-date-on-return-envelope/):
+On October 21st, 2024, the Philadelphia City Commissioners publicly published pdf and Excel formatted lists of ballots that might be "potentially incorrect" for various reasons. Their [announcement read](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/):
 
-*"all these ballot submissions have the possibility of NOT being counted. It is strongly advised that the voters on these lists request a replacement ballot at the County Board of Elections office in City Hall Room 140 on Saturday or Sunday from 9:00 am – 3:00 pm; Monday, November 7th from 9:00 am – 5:00 pm; or on Election Day from 7:30 am – 7:30 pm to avoid the potential rejection of their ballot."*
+*"The Philadelphia Board of Elections has received mail-in and absentee ballots with various issues that may prevent them from being counted in the upcoming November 5, 2024 General Election. These issues include:*
+
+*- Unverifiable Identification: Mail ballots from voters whose identification could not be verified. Voters who have not submitted acceptable proof of ID or whose ID could not be verified should fill out the ID verification form, and submit it along with a photocopy or picture of an acceptable ID (if available) to phillyelection@phila.gov or via fax to (215) 686-3398 by Tuesday, November 12, 2024. Without this information, the Board cannot count your ballot.*
+
+*- Undeliverable or Potentially Flawed: Ballots returned by the U.S. Postal Service as “undeliverable”, or administratively determined to be potentially flawed. Flaws may include lacking a signature on the declaration envelope, lacking a written date on the declaration envelope, lacking a secrecy envelope, or having a potentially incorrect date. These ballot submissions have the possibility of NOT being counted.*
+"*
 
 There are also instructions on the Commissioners site for people who cannot appear in person.
 
@@ -83,11 +57,9 @@ This site is not associated with the City Commissioners, any government, politic
 Search the database below to see if your ballot was flagged as "potentially incorrect."
 
 ```{r datatable, echo=FALSE}
-datatable(dat, 
+datatable(df, 
           options = list(pageLength = 10))
 ```
 **Attribution and Sourcing**
 
-This tool was created by Michael Fichman on 11/7/2022 using data published by the City Commissioners on 11/5/2022. The code is available [on Github](https://github.com/mafichman/PotentiallyIncorrectBallots).
-
-An equivalent tool for Allegheny County can be found [here](https://mafichman.github.io/incorrectBallotsPGH/).
+This tool was created by Michael Fichman on 10/23/2024 using data published by the City Commissioners on 10/21/2024. The code is available [on Github](https://github.com/mafichman/PotentiallyIncorrectBallots).
