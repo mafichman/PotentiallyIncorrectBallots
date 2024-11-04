@@ -32,7 +32,7 @@ df <- read_excel(tf1)
 
 # What is this document?
 
-**You can use this site to to see if your 2024 mail-in ballot for the November election was listed as "potentially incorrect" by the Philadelphia City Commissioners (as of October 23rd, 2024) and in need of correction.**
+**You can use this site to to see if your 2024 mail-in ballot for the November election was listed as "potentially flawed" by the Philadelphia City Commissioners (as of November 4th, 2024) and in need of correction.**
 
 For information about how to correct your ballot, [please visit the Philadelphia City Commissioners' website](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/).
 
