@@ -36,7 +36,7 @@ df <- read_excel(tf1)
 
 For information about how to correct your ballot, [please visit the Philadelphia City Commissioners' website](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/).
 
-On November 1st, 2024, the Philadelphia City Commissioners publicly published pdf and Excel formatted lists of ballots that might be "potentially incorrect" for various reasons. Their [announcement read](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/):
+On November 1st, 2024, the Philadelphia City Commissioners publicly published pdf and Excel formatted lists of ballots that might be "potentially flawed" for various reasons. Their [announcement read](https://vote.phila.gov/news/2024/10/08/2024-general-election-unverifiable-identification-undeliverable-and-or-potentially-flawed-ballots/):
 
 *"The Philadelphia Board of Elections has received mail-in and absentee ballots with various issues that may prevent them from being counted in the upcoming November 5, 2024 General Election. These issues include:*
 
